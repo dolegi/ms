@@ -21,6 +21,8 @@ const w = d * 7
 const y = d * 365.25
 const match = `^(-?(?:\d+)?\.?\d+) *(milliseconds?|msecs?|ms|seconds?|secs?|s|minutes?|mins?|m|hours?|hrs?|h|days?|d|weeks?|w|years?|yrs?|y)?$`
 
+var re = regexp.MustCompile(match)
+
 var suffixes = map[string]time{
 	"day":         time{"d", "day"},
 	"hour":        time{"h", "hour"},
@@ -88,7 +90,6 @@ func Parse(input string) int {
 	if len(input) > 100 {
 		return 0
 	}
-	re := regexp.MustCompile(match)
 
 	found := re.FindAllStringSubmatch(input, -1)
 
