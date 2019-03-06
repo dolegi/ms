@@ -1,6 +1,8 @@
 # ms
 [![Build Status](https://travis-ci.org/dolegi/ms.svg?branch=master)](https://travis-ci.org/dolegi/ms)
 
+Golang has support for this built in. Check out [ParseDuration](https://golang.org/pkg/time/#ParseDuration)
+
 Converts time strings to and from number of milliseconds
 
 This is a rewrite of [zeit/ms](https://github.com/zeit/ms) in golang
